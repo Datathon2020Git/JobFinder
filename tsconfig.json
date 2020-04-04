@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@job-finder/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@job-finder/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@job-finder/domain": ["libs/domain/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
