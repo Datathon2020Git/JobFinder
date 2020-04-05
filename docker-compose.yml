@@ -8,11 +8,9 @@ services:
     build:
       context: ./
       dockerfile: ./docker/angular/Dockerfile
-    ports:
-      - '4200:4200'
   nest:
     build:
       context: ./
       dockerfile: ./docker/nest/Dockerfile
     ports:
-      - '3333:3333'
+      - 8080:8080
