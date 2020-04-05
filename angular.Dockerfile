@@ -1,5 +1,5 @@
 
-FROM job-finder_datathonbuild as builder
+FROM job-finder-builder as builder
 WORKDIR /app
 RUN ls
 RUN npm run build
