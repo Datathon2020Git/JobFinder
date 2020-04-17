@@ -26,6 +26,9 @@
               "apps/job-finder/src/assets"
             ],
             "styles": [
+              "styles/spacing.scss",
+              "styles/container.scss",
+              "styles/typography.scss",
               "apps/job-finder/src/styles.scss"
             ],
             "scripts": []

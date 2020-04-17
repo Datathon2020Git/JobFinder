@@ -1,8 +1,8 @@
-<div style="text-align:center">
-  <h1>Welcome to job-finder!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
-  />
-</div>
-<div>Message: {{ hello$ | async | json }}</div>
+<mat-card fxLayout="column" fxFlex="grow">
+  <mat-card-header>
+    <job-finder-title></job-finder-title>
+  </mat-card-header>
+  <mat-card-content>
+    <job-finder-menu></job-finder-menu>
+  </mat-card-content>
+</mat-card>
