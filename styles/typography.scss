@@ -5,7 +5,6 @@
 }
 mat-toolbar .headline {
     background-color: none;
-
 }
 .tagline {
     padding: 1rem 3rem;
@@ -13,6 +12,26 @@ mat-toolbar .headline {
 .rounded {
     border-radius: 8px;
 }
-.background-color-darkgray {
-    background-color: lightgrey !important;
+.background-color-lightgray {
+    background-color: rgba(211, 211, 211, 0.4) !important;
+}
+.main-menu {
+    position: fixed;
+    z-index: 5;
+    right: 1rem;
+    top: 0;
+}
+.menu-item {
+    cursor: pointer;
+    min-width: 80px;
+    font-weight: 450;
+    border: none;
+    opacity: 0.7;
+    &:hover {
+        border-bottom: 1px solid black;
+        opacity: 1;
+    }
+    span {
+        white-space: nowrap;
+    }
 }

@@ -2,10 +2,15 @@
  * Remove template code below
  */
 :host {
- display: flex;
- flex-grow: 1;
- mat-card {
-    background: url("../assets/background_1.jpg");
-    background-size: cover;
- }
+   display: flex;
+   flex-grow: 1;
+   mat-card {
+      padding: 0;
+      background: url("../assets/background_1.jpg");
+      background-size: cover;
+   }
+   mat-card-header {
+      background: url("../assets/title_background.png");
+      background-size: cover;
+   }
 }
