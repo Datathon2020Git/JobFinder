@@ -10,7 +10,9 @@
       background-size: cover;
    }
    mat-card-header {
-      background: url("../assets/title_background.png");
+      // background: url("../assets/title_background.png");
+      // background: url("../assets/background_title_5.jpg");
       background-size: cover;
+      background-repeat: repeat;
    }
 }

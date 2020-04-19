@@ -18,7 +18,7 @@ mat-toolbar .headline {
 .main-menu {
     position: fixed;
     z-index: 5;
-    right: 1rem;
+    left: 1rem;
     top: 0;
 }
 .menu-item {
@@ -34,4 +34,11 @@ mat-toolbar .headline {
     span {
         white-space: nowrap;
     }
+}
+.logo {
+    position: absolute;
+    right: 5rem;
+    top: 5rem;
+    object-fit: cover;
+    height: 130px;
 }

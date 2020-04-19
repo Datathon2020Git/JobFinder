@@ -31,12 +31,12 @@ $job-finder-theme: mat-light-theme($job-finder-primary, $job-finder-accent, $job
 
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-    height: 100%;
+html {
+    display: block;
+    width: 100%;
 }
 body {
-    height: 100%;
+    min-height: 100vh;
     margin: 0;
     display: flex;
 }
