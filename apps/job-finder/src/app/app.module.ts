@@ -9,6 +9,8 @@ import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing.module';
 import { CoreModule } from './core/core.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { CoreModule } from './core/core.module';
     CoreModule,
     MatCardModule,
     FlexLayoutModule,
-    RouterModule.forRoot(AppRoutes)
+    RouterModule.forRoot(AppRoutes),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

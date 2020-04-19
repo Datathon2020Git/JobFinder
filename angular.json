@@ -23,7 +23,8 @@
             "aot": true,
             "assets": [
               "apps/job-finder/src/favicon.ico",
-              "apps/job-finder/src/assets"
+              "apps/job-finder/src/assets",
+              "apps/job-finder/src/manifest.webmanifest"
             ],
             "styles": [
               "styles/animations.scss",
@@ -61,7 +62,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/job-finder/ngsw-config.json"
             }
           }
         },

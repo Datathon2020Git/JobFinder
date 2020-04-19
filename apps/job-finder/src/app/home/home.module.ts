@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { homeRoutes } from './home.routing.module';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
     declarations: [
@@ -12,6 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ],
     imports: [
         CommonModule,
+        CoreModule,
         MatCardModule,
         FlexLayoutModule,
         RouterModule.forChild(homeRoutes)
