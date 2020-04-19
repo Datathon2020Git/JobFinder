@@ -1,0 +1,22 @@
+
+:host {
+    display: flex;
+    flex-grow: 1;
+    .example-card {
+        max-width: 400px;
+    }
+    .example-card:hover {
+        animation: zoomonhover 200ms ease-in;
+        box-shadow: 8px 5px 10px lightgray;
+        transform: scale(1.03, 1.03);
+    
+    }
+    img {
+        height: 370px;
+        object-fit: cover;
+    }
+    .menu-container {
+        padding: 1rem 0.5rem;
+    }
+
+}    

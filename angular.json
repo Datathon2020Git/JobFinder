@@ -26,6 +26,7 @@
               "apps/job-finder/src/assets"
             ],
             "styles": [
+              "styles/animations.scss",
               "styles/spacing.scss",
               "styles/container.scss",
               "styles/typography.scss",

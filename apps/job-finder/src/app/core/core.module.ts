@@ -1,31 +1,29 @@
-import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
-import { LadingCardsComponent } from './landing-cards/landing-cards.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgModule } from "@angular/core";
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { TitleComponent } from './title/title.component';
-import { MenuComponent } from './menu/menu.component';
 import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MenuComponent } from './menu/menu.component';
+import { TitleComponent } from './title/title.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
-        LadingCardsComponent,
         TitleComponent,
         MenuComponent
     ],
-
     imports: [
         CommonModule,
         MatToolbarModule,
         MatButtonModule,
         FlexLayoutModule,
         MatCardModule,
-        MatListModule
+        MatListModule,
+        RouterModule
     ],
     exports: [
-        LadingCardsComponent,
         TitleComponent,
         MenuComponent
     ]

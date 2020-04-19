@@ -1,16 +1,12 @@
 <mat-list fxLayout fxLayoutGap="2rem" class="main-menu" fxLayout="start center">
-    <mat-list-item class="menu-item">
+    <mat-list-item class="menu-item" routerLinkActive="active" [routerLink]="['/home']">
         <span>
             Home
         </span>
     </mat-list-item>
-    <mat-list-item class="menu-item"><span>
-            About Us
-        </span>
-    </mat-list-item>
-    <mat-list-item class="menu-item">
+    <mat-list-item class="menu-item" routerLinkActive="active" [routerLink]="['/about']">
         <span>
-            Contact
+            About Us
         </span>
     </mat-list-item>
     <mat-list-item class="menu-item-logo">

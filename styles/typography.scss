@@ -16,10 +16,6 @@ mat-toolbar .headline {
     background-color: rgba(211, 211, 211, 0.4) !important;
 }
 .main-menu {
-    // position: fixed;
-    // z-index: 5;
-    // left: 1rem;
-    // top: 0;
     box-shadow: 1px 0 10px;
     background-color: #38829e;
     padding-bottom: 5px;
@@ -30,12 +26,15 @@ mat-toolbar .headline {
 .menu-item {
     width: auto;
     cursor: pointer;
-    // min-width: 80px;
     font-weight: 450;
     border: none;
     opacity: 0.75;
     box-sizing: border-box;
     &:hover {
+        border-bottom: 1px solid black;
+        opacity: 1;
+    }
+    &:focus {
         border-bottom: 1px solid black;
         opacity: 1;
     }
@@ -50,4 +49,11 @@ mat-toolbar .headline {
 .logo {
     object-fit: cover;
     height: 40px;
+}
+.active {
+    border-bottom: 1px solid black;
+    opacity: 1;
+}
+mat-list-item:focus {
+    outline: 0;
 }
