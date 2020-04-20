@@ -1,59 +1,13 @@
 .headline {
     text-align: center;
     font-size: 42px;
-    font-family: "Roboto Slab", serif;
+    font-family: "Glegoo", serif;
+    letter-spacing: 2px;
+    font-weight: bolder;
 }
 mat-toolbar .headline {
     background-color: none;
 }
 .tagline {
     padding: 1rem 3rem;
-}
-.rounded {
-    border-radius: 8px;
-}
-.background-color-lightgray {
-    background-color: rgba(211, 211, 211, 0.4) !important;
-}
-.main-menu {
-    box-shadow: 1px 0 10px;
-    background-color: #38829e;
-    padding-bottom: 5px;
-    mat-list-item {
-        width: auto !important;
-    }
-}
-.menu-item {
-    width: auto;
-    cursor: pointer;
-    font-weight: 450;
-    border: none;
-    opacity: 0.75;
-    box-sizing: border-box;
-    &:hover {
-        border-bottom: 1px solid black;
-        opacity: 1;
-    }
-    &:focus {
-        border-bottom: 1px solid black;
-        opacity: 1;
-    }
-    span {
-        color: white;
-        white-space: nowrap;
-    }
-}
-.menu-item-logo {
-    margin-left: auto;
-}
-.logo {
-    object-fit: cover;
-    height: 40px;
-}
-.active {
-    border-bottom: 1px solid black;
-    opacity: 1;
-}
-mat-list-item:focus {
-    outline: 0;
 }

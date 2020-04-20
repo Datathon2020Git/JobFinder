@@ -3,7 +3,7 @@
 @import "~@angular/material/theming";
 // Plus imports for other components in your app.
 $custom-typography: mat-typography-config(
-    $font-family: "Roboto, monospace",
+    $font-family: "Roboto Slab, sans-serif",
     $headline: mat-typography-level(32px, 48px, 600),
     $body-1: mat-typography-level(16px, 24px, 400),
 );

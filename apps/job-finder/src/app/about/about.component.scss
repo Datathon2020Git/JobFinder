@@ -3,9 +3,19 @@
         width: 60%;
         margin: 2rem auto;
         height: 100%;
+        background-color: rgba(229, 229, 229, 0.7);
         ::ng-deep .mat-card-header-text {
             width: 100%;
             text-align: center;
+        }
+        mat-card-header {
+            padding-top: 1rem;
+            margin-bottom: 3rem;
+        }
+        .about-image {
+            width: 600px;
+            background-image: url("../../assets/wizards.jpg");
+            background-size: contain;
         }
     }
 }
