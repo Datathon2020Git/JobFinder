@@ -43,3 +43,13 @@ body {
 a {
     text-decoration: none;
 }
+router-outlet ~ * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+main {
+    display: block;
+    flex: 1;
+    position: relative;
+}

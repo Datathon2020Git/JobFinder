@@ -4,6 +4,7 @@
 :host {
    display: flex;
    flex-grow: 1;
+   position: relative;
    mat-card.main-card {
       margin-top: 60px;
       padding: 0;
