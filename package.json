@@ -49,6 +49,7 @@
     "@nestjs/platform-express": "^6.8.3",
     "@nrwl/angular": "9.2.2",
     "core-js": "^2.5.4",
+    "express": "^4.17.1",
     "mongoose": "^5.9.7",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.4",

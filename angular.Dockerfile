@@ -1,10 +1,8 @@
-
-FROM job-finder-modules as builder
+FROM node:10-alpine
 WORKDIR /app
-COPY ./ ./
-RUN ls
-RUN npm run build --prod
-
-FROM nginx:1.17.1-alpine
-COPY --from=builder /app/apps/job-finder/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/dist/apps/job-finder /usr/share/nginx/html
+COPY angular.server.js dist/
+WORKDIR /app/dist
+COPY --from=datathonacr.azurecr.io/angular-builder:latest /app/dist/apps/job-finder /app/dist/
+COPY --from=datathonacr.azurecr.io/e-vocation-modules:latest /app/node_modules /app/node_modules
+EXPOSE 8080
+CMD node angular.server.js

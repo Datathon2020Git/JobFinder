@@ -1,6 +1,7 @@
 
-FROM job-finder-builder as builder
+FROM job-finder-modules as builder
 WORKDIR  /app
+COPY ./ ./
 RUN npm run build api
 
 FROM node:10-alpine
