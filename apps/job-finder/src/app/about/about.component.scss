@@ -3,7 +3,6 @@
         flex-grow:1;
         width: 60%;
         margin: 2rem auto;
-        height: 100%;
         background-color: rgba(229, 229, 229, 0.7);
         ::ng-deep .mat-card-header-text {
             width: 100%;
@@ -14,9 +13,10 @@
             margin-bottom: 3rem;
         }
         .about-image {
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
             background-image: url("../../assets/wizards.jpg");
-            background-size: contain;
+            background-size: cover;
         }
     }
 }

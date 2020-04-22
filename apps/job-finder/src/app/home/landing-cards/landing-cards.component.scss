@@ -1,8 +1,8 @@
 :host {
-    .example-card {
+    .landing-card {
         max-width: 400px;
     }
-    .example-card:hover {
+    .landing-card:hover {
         animation: zoomonhover 200ms ease-in;
         box-shadow: 8px 5px 10px lightgray;
         transform: scale(1.02, 1.02);
