@@ -11,11 +11,16 @@ import { AppRoutes } from './app.routing.module';
 import { CoreModule } from './core/core.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatStepperModule } from '@angular/material/stepper';
+import { ResultsPageComponent } from './results-page/results-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
+    ResultsPageComponent
   ],
   imports: [
     BrowserModule,

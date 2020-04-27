@@ -1,11 +1,10 @@
-import { NgModule } from "@angular/core";
-import { LadingCardsComponent } from './landing-cards/landing-cards.component';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { homeRoutes } from './home.routing.module';
-import { MatCardModule } from '@angular/material/card';
+import { NgModule } from "@angular/core";
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule } from '@angular/material/card';
 import { CoreModule } from '../core/core.module';
+import { HomeRoutingModule } from './home.routing.module';
+import { LadingCardsComponent } from './landing-cards/landing-cards.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +15,7 @@ import { CoreModule } from '../core/core.module';
         CoreModule,
         MatCardModule,
         FlexLayoutModule,
-        RouterModule.forChild(homeRoutes)
+        HomeRoutingModule
     ]
 })
 export class HomeModule {

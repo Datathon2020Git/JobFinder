@@ -1,0 +1,12 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your Details</ng-template>
+        <job-finder-user-form></job-finder-user-form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <ng-template matStepLabel>Choose cluster</ng-template>
+
+        <job-finder-occ-clusters-form></job-finder-occ-clusters-form>
+    </mat-step>
+    <!-- <job-finder-occ-rating-form></job-finder-occ-rating-form> -->
+</mat-horizontal-stepper>
