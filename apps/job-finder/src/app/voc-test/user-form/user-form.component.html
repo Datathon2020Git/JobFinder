@@ -1,9 +1,26 @@
-<form [formGroup]="firstFormGroup">
+<form [formGroup]="userForm" fxLayout="column" fxLayoutGap="1rem">
     <mat-form-field>
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        <mat-label>Age</mat-label>
+        <input matInput type="number" placeholder="Ex. 23" formControlName="Age">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Sex</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let sex of sexes" [value]="sex.value">
+                {{sex.displayValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Country of Residence</mat-label>
+        <input type="text" placeholder="Ex. United States" matInput formControlName="Residence" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let country of filteredOptions | async" [value]="country">
+                {{country}}
+            </mat-option>
+        </mat-autocomplete>
     </mat-form-field>
     <div>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-raised-button color="primary" matStepperNext>Next</button>
     </div>
 </form>

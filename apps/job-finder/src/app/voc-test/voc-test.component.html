@@ -1,12 +1,17 @@
-<mat-horizontal-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-        <ng-template matStepLabel>Fill out your Details</ng-template>
-        <job-finder-user-form></job-finder-user-form>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
-        <ng-template matStepLabel>Choose cluster</ng-template>
+<section class="m-3">
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="forms.userForm" [optional]="true">
+            <ng-template matStepLabel>Tell us a little bit About you</ng-template>
+            <job-finder-user-form [userForm]="forms.userForm"></job-finder-user-form>
+        </mat-step>
+        <!-- <mat-step [stepControl]="forms.clusterForm">
+            <ng-template matStepLabel>Choose Vocation Category</ng-template>
 
-        <job-finder-occ-clusters-form></job-finder-occ-clusters-form>
-    </mat-step>
-    <!-- <job-finder-occ-rating-form></job-finder-occ-rating-form> -->
-</mat-horizontal-stepper>
+            <job-finder-occ-clusters-form></job-finder-occ-clusters-form>
+        </mat-step>
+        <mat-step [stepControl]="forms.ratingsForm">
+            <ng-template matStepLabel>Occupation Rating</ng-template>
+            <job-finder-occ-rating-form></job-finder-occ-rating-form>
+        </mat-step> -->
+    </mat-horizontal-stepper>
+</section>

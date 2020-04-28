@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormsService } from './forms.service';
 
 @Component({
   selector: 'job-finder-voc-test',
@@ -8,18 +8,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class VocTestComponent implements OnInit {
 
-  isLinear = false;
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
+  isLinear = true;
 
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor( public forms: FormsService) { }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
+    this.forms.initialize()
   }
 }

@@ -10,12 +10,18 @@ import { VocTestComponent } from './voc-test.component';
 import { MatButtonModule } from '@angular/material/button';
 import { OccClustersFormComponent } from './occ-clusters-form/occ-clusters-form.component';
 import { OccRatingFormComponent } from './occ-rating-form/occ-rating-form.component';
+import { FormsService } from './forms.service';
+import { MatSelectModule } from '@angular/material/select';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const MaterialModules = [
     MatInputModule,
     MatFormFieldModule,
     MatStepperModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule,
+    MatAutocompleteModule
 ]
 @NgModule({
     declarations: [
@@ -28,9 +34,13 @@ const MaterialModules = [
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
+        FlexLayoutModule,
         VocTestRoutingModule,
         ...MaterialModules,
     ],
+    providers: [
+        FormsService
+    ]
 })
 export class VocTestModule {
 
