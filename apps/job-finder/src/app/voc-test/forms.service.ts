@@ -4,7 +4,7 @@ import { FormGroup, FormArray, FormBuilder, FormControl } from '@angular/forms';
 @Injectable()
 export class FormsService {
     userForm: FormGroup;
-    clusterForm: FormGroup;
+    clusterForm: FormArray;
     ratingsForm: FormArray;
     constructor(private _formBuilder: FormBuilder) { }
     public initialize(): void {
@@ -20,7 +20,7 @@ export class FormsService {
         })
     }
     private initClusterForm(): void {
-
+        this.clusterForm = this._formBuilder.array([]);
     }
     private initRatingsForm(): void {
 
