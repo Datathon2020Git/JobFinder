@@ -67,3 +67,12 @@ mat-list-item:focus {
     margin-right: auto;
     margin-left: auto;
 }
+.cluster-box {
+    padding: 1rem 1.5rem;
+    border: 2px solid gray;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.cluster-box.clicked {
+    background-color:lightgreen;
+}

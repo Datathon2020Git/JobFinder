@@ -14,6 +14,7 @@ import { FormsService } from './forms.service';
 import { MatSelectModule } from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ClusterBoxComponent } from './occ-clusters-form/cluster-box/cluster-box.component';
 
 const MaterialModules = [
     MatInputModule,
@@ -28,7 +29,8 @@ const MaterialModules = [
         VocTestComponent,
         UserFormComponent,
         OccClustersFormComponent,
-        OccRatingFormComponent
+        OccRatingFormComponent,
+        ClusterBoxComponent
     ],
     imports: [
         CommonModule,

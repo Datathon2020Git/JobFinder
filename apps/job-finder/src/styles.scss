@@ -5,6 +5,7 @@
 $custom-typography: mat-typography-config(
     $font-family: "Roboto Slab, sans-serif",
     $headline: mat-typography-level(32px, 48px, 600),
+    $title: mat-typography-level(24px, 26px, 500),
     $body-1: mat-typography-level(16px, 24px, 400),
 );
 // Include the common styles for Angular Material. We include this here so that you only
@@ -52,6 +53,13 @@ main {
     display: block;
     flex: 1;
     position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0 !important;
 }
 // Remove Input type= number Arrows
 /* Chrome, Safari, Edge, Opera */

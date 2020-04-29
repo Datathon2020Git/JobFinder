@@ -4,7 +4,7 @@ import { FormGroup, FormArray, FormBuilder, FormControl } from '@angular/forms';
 @Injectable()
 export class FormsService {
     userForm: FormGroup;
-    clusterForm: FormArray;
+    clusterForm: FormGroup;
     ratingsForm: FormArray;
     constructor(private _formBuilder: FormBuilder) { }
     public initialize(): void {
@@ -20,9 +20,23 @@ export class FormsService {
         })
     }
     private initClusterForm(): void {
-        this.clusterForm = this._formBuilder.array([]);
+        this.clusterForm = this._formBuilder.group({
+            clusters: new FormControl([])
+        });
     }
     private initRatingsForm(): void {
 
+    }
+    public toggleCluster(name: string) {
+        const control = this.clusterForm.get('clusters');
+        const currentValue: string[] = control.value;
+        let nextValue = currentValue;
+        const index = currentValue.indexOf(name);
+        if (index > -1) {
+            nextValue.splice(index, 1);
+        } else {
+            nextValue.push(name)
+        }
+        control.patchValue(nextValue);
     }
 }

@@ -8,7 +8,18 @@ import { FormArray } from '@angular/forms';
 })
 export class OccClustersFormComponent implements OnInit {
   @Input() clusterForm: FormArray;
-
+  clusterNames: string[] = [
+    ' Construction Work',
+    'Material Technicial',
+    'Natural Engineers',
+    'Healthcare',
+    'Logicstics',
+    'Food Technology',
+    'Apparel Enterprises',
+    'Social Services',
+    'Arts',
+    'Education'
+  ]
   constructor() { }
 
   ngOnInit() {

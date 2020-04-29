@@ -1,5 +1,8 @@
 <form [formGroup]="clusterForm">
-    <div fxLayout fxLayoutGap="1rem">
+    <section fxLayout="row wrap" fxLayoutGap="1rem">
+        <job-finder-cluster-box *ngFor="let clusterName of clusterNames" [name]="clusterName"></job-finder-cluster-box>
+    </section>
+    <div fxLayout fxLayoutGap="1rem" class="mt-1">
         <button mat-raised-button color="accent" matStepperPrevious>Back</button>
         <button mat-raised-button color="primary" matStepperNext>Next</button>
     </div>
