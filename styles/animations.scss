@@ -12,3 +12,14 @@
         box-shadow: 10px 6px 10px lightgray;
     }
 }
+@keyframes opacityonhover {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}

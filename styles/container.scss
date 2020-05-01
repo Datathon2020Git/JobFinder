@@ -68,11 +68,32 @@ mat-list-item:focus {
     margin-left: auto;
 }
 .cluster-box {
+    width: 100px;
+    height:  100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+    word-wrap: normal;
+    text-align: center;
     padding: 1rem 1.5rem;
-    border: 2px solid gray;
-    border-radius: 20px;
+    // border: 2px solid gray;
+    border-radius: 50%;
+    // background-color: #BF360C;
+    background-color: rgba(211, 211, 211, 0.4);
+    // color: black;
+    opacity: 0.4;
     cursor: pointer;
+    &:hover {
+        background-color: #38829e;
+        animation: opacityonhover 200ms ease-in;
+        opacity: 1;
+        color: white;
+    }
 }
 .cluster-box.clicked {
-    background-color:lightgreen;
+    color: white;
+
+    background-color: #38829e;
+    opacity: 1;
 }
