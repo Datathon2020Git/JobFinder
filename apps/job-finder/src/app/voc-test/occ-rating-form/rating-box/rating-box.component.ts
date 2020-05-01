@@ -10,7 +10,7 @@ export class RatingBoxComponent implements OnInit {
   @Input() description: string;
   @Input() control: FormControl;
   max = 5;
-  min = 0;
+  min = 1;
   step = 1;
   thumbLabel = true;
   tickInterval = 1

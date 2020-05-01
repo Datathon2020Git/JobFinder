@@ -8,7 +8,7 @@ import { FormsService } from './forms.service';
 })
 export class VocTestComponent implements OnInit {
 
-  isLinear = true;
+  isLinear = false;
 
   constructor( public forms: FormsService) { }
 

@@ -1,9 +1,11 @@
-<mat-card>
+<mat-card fxLayout="column" fxLayoutAlign="space-between strech">
     <span>
         {{description}}
     </span>
-    <hr>
-    <mat-slider [max]="5" [min]="min" [step]="step" [thumbLabel]="thumbLabel" [tickInterval]="tickInterval"
-        [formControl]="control">
-    </mat-slider>
+    <section>
+        <hr>
+        <mat-slider [max]="5" [min]="min" [step]="step" [thumbLabel]="thumbLabel" [tickInterval]="tickInterval"
+            [formControl]="control">
+        </mat-slider>
+    </section>
 </mat-card>

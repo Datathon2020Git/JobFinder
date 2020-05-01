@@ -1,6 +1,6 @@
 <form [formGroup]="ratingsForm" fxLayout="column" fxLayoutGap="1rem">
-    <section fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="1rem">
-        <job-finder-rating-box *ngFor="let description of formsService.descriptions; let i =index"
+    <section fxLayout.lt-sm="column" fxLayout.gt-sm="row wrap" fxLayoutAlign="center center">
+        <job-finder-rating-box class="mb-1 mr-1" fxFlex="45%" *ngFor="let description of formsService.descriptions; let i =index"
             [control]="ratingsForm.at(i)" [description]="description">
         </job-finder-rating-box>
     </section>

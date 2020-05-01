@@ -1,0 +1,7 @@
+:host {
+    @media (max-width: 768px) {
+        ::ng-deep job-finder-rating-box {
+            max-width: 100% !important;
+        }
+    }
+}
