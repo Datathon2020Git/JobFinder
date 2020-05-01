@@ -15,6 +15,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClusterBoxComponent } from './occ-clusters-form/cluster-box/cluster-box.component';
+import { RatingBoxComponent } from './occ-rating-form/rating-box/rating-box.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatSliderModule } from '@angular/material/slider';
 
 const MaterialModules = [
     MatInputModule,
@@ -22,7 +25,9 @@ const MaterialModules = [
     MatStepperModule,
     MatButtonModule,
     MatSelectModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatCardModule,
+    MatSliderModule
 ]
 @NgModule({
     declarations: [
@@ -30,7 +35,8 @@ const MaterialModules = [
         UserFormComponent,
         OccClustersFormComponent,
         OccRatingFormComponent,
-        ClusterBoxComponent
+        ClusterBoxComponent,
+        RatingBoxComponent
     ],
     imports: [
         CommonModule,

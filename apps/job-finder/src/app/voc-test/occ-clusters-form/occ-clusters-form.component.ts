@@ -13,7 +13,7 @@ export class OccClustersFormComponent implements OnInit {
     'Material Technicial',
     'Natural Engineers',
     'Healthcare',
-    'Logicstics',
+    'Logistics',
     'Food Technology',
     'Apparel Enterprises',
     'Social Services',

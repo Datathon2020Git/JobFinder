@@ -1,8 +1,11 @@
-<mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
-    <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button >Reset</button>
+<form [formGroup]="ratingsForm" fxLayout="column" fxLayoutGap="1rem">
+    <section fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="1rem">
+        <job-finder-rating-box *ngFor="let description of formsService.descriptions; let i =index"
+            [control]="ratingsForm.at(i)" [description]="description">
+        </job-finder-rating-box>
+    </section>
+    <div fxLayout fxLayoutGap="1rem">
+        <button mat-raised-button matStepperPrevious color="accent">Back</button>
+        <button mat-raised-button color="primary" (click)="submitForm()">Submit</button>
     </div>
-</mat-step>
+</form>

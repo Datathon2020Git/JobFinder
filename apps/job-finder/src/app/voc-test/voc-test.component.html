@@ -8,9 +8,9 @@
             <ng-template matStepLabel>Choose Vocation Category</ng-template>
             <job-finder-occ-clusters-form [clusterForm]="forms.clusterForm"></job-finder-occ-clusters-form>
         </mat-step>
-        <!-- <mat-step [stepControl]="forms.ratingsForm">
+        <mat-step [stepControl]="forms.ratingsForm">
             <ng-template matStepLabel>Occupation Rating</ng-template>
-            <job-finder-occ-rating-form></job-finder-occ-rating-form>
-        </mat-step> -->
+            <job-finder-occ-rating-form [ratingsForm]="forms.ratingsForm"></job-finder-occ-rating-form>
+        </mat-step>
     </mat-horizontal-stepper>
 </section>

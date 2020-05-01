@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup, FormArray } from '@angular/forms';
+import { FormsService } from '../forms.service';
 
 @Component({
   selector: 'job-finder-occ-rating-form',
@@ -7,19 +8,13 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./occ-rating-form.component.scss']
 })
 export class OccRatingFormComponent implements OnInit {
+  @Input() ratingsForm: FormArray;
 
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
-
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(public formsService: FormsService) { }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
   }
-
+  submitForm() {
+    console.log('Form Submitted');
+  }
 }

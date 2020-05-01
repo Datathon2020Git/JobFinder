@@ -1,0 +1,8 @@
+:host {
+    mat-card {
+        background-color: rgba(211, 211, 211, 0.2);
+        .mat-slider-horizontal {
+            min-width: 200px;
+        }
+    }
+}
