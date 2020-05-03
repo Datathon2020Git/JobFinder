@@ -8,15 +8,18 @@ import { PreloadAllModules, RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AboutComponent } from './about/about.component';
+import { OurTeamComponent } from './about/our-team/our-team.component';
+import { TeamMemberComponent } from './about/our-team/team-member/team-member.component';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing.module';
 import { CoreModule } from './core/core.module';
-import { ResultsPageComponent } from './results-page/results-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
+    OurTeamComponent,
+    TeamMemberComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { ResultsPageComponent } from './results-page/results-page.component';
     FlexLayoutModule,
     RouterModule.forRoot(AppRoutes, { preloadingStrategy: PreloadAllModules }),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

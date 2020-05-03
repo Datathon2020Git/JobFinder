@@ -5,34 +5,32 @@
     <section fxLayout="column" fxLayoutAlign="center" fxLayoutGap="2rem" fxFlex="grow">
         <section class="menu-container mt-1" fxLayout fxLayoutAlign="center stretch" fxLayoutGap="1rem"
             fxLayout.lt-lg="column">
-            <mat-card class="landing-card cursor-pointer" [routerLink]="['/voc-test']">
+            <mat-card class="landing-card cursor-pointer">
                 <img mat-card-image src="assets/job-forecasts.jpg" alt="Job Forecasts">
                 <mat-card-content>
                     <p>
-                        Using interactive graphs, we’ve visualized the Job Openings Forecasts datasets from
-                        CEDEFOP (European Center For The Development Of Vocational Training). Navigating through these
-                        graphs you can find what occupations will be the centermost of attention in the upcoming years
-                        in the EU.
+                        Using interactive graphs, we’ve visualized the Job Openings Forecasts datasets from the European
+                        Center For The Development Of Vocational Training (CEDEFOP). Navigating through these graphs you
+                        can find the occupations which will be the centermost of attention in the upcoming years in the
+                        EU.
                     </p>
                 </mat-card-content>
             </mat-card>
-            <mat-card class="landing-card cursor-pointer">
+            <mat-card class="landing-card cursor-pointer" [routerLink]="['/voc-test']">
                 <img mat-card-image src="assets/test.jpg" alt="Profession Usher">
                 <mat-card-content>
                     <p>
                         E-vocation Wizard is your Employment and Profession Usher. Based on your occupation preferences,
-                        this tool provides you with personalized data for you to find your ideal career.
+                        this tool provides you with personalized data for you (in order) to find your ideal career.
                     </p>
                 </mat-card-content>
             </mat-card>
-
-
             <mat-card class="landing-card cursor-pointer">
                 <img mat-card-image src="assets/job-openings.jpg" alt="Job Openings">
                 <mat-card-content>
                     <p>
-                        Based on sources like LinkedIn and Glassdoor, we’ve created our own Job Openings Search Engine
-                        that helps you or your business to find potential job openings and new employees.
+                        Professional Communities Data Aggregator - We’ve created our own Job Openings Search Engine that
+                        helps you or your business find potential job openings and new employees.
                     </p>
                 </mat-card-content>
             </mat-card>

@@ -1,7 +1,8 @@
 <form [formGroup]="ratingsForm" fxLayout="column" fxLayoutGap="1rem">
     <section fxLayout.lt-sm="column" fxLayout.gt-sm="row wrap" fxLayoutAlign="center center">
-        <job-finder-rating-box class="mb-1 mr-1" fxFlex="45%" *ngFor="let description of formsService.descriptions; let i =index"
-            [control]="ratingsForm.at(i)" [description]="description">
+        <job-finder-rating-box class="mb-1 mr-1" fxFlex="45%"
+            *ngFor="let occupation of formsService.occupations; let i =index" [control]="ratingsForm.at(i)"
+            [description]="occupation.description" [title]="occupation.title">
         </job-finder-rating-box>
     </section>
     <div fxLayout fxLayoutGap="1rem">

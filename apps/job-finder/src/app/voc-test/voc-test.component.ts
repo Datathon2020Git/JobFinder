@@ -11,7 +11,7 @@ import { fadeInAnimation } from '../animations';
 })
 export class VocTestComponent implements OnInit {
 
-  isLinear = false;
+  isLinear = true;
 
   constructor( public forms: FormsService) { }
 

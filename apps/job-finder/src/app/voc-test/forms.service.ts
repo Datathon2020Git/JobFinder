@@ -6,21 +6,54 @@ export class FormsService {
     userForm: FormGroup;
     clusterForm: FormGroup;
     ratingsForm: FormArray;
-    descriptions: string[] = [
-        'anatomical pathology technicians assist specialised doctors in pathology in conducting postmortem examinations keeping records of the samples specimens organs and the respective findings and taking care of their appropriate disposal under supervision following the orders of the doctor of medicine',
-        'dental technicians manufacture dental custommade devices like bridges crowns dentures and appliances under the supervision of dental practitioners following their directions and specifications',
-        'healthcare inspectors visit healthcare facilities to ensure proper care is given to all patients in accordance with legal requirements they also inspect if equipment processes and staff operate adequately to prevent the spreading of infections and diseases',
-        'medical transcriptionists interpret dictated information from the doctor or other healthcare professionals and convert it into documents they create format and edit medical records for patients based on the provided data and take care to apply punctuation and grammar rules',
-        'podiatrists are foot specialists who study foot physiology and pathology from a structural and functional standpoint they assess diagnose and treat physical sporting injuries rehabilitation medical and surgical problems of the foot and lower limb in their clinical practice podiatrists are active outside the clinical environment in research medicolegal and forensic activitiesÂ podiatrists act within the scope of their podiatry training experience and regulating authority of their member country',
-        'anodising machine operators set up and tend anodising machines designed to provide otherwise finished metal workpieces usually aluminumbased with a durable anodic oxide corrosionresistant finishing coat by a electrolyctic passiviation process that increases the thickness of the natural oxide layer of the metal workpieces surface',
-        'container equipment assemblers manufacture containers such as boilers or pressure vessels they read blueprints and technical drawings to assemble parts and to build piping and fittings',
-        'furniture assemblers place together all parts of furniture and auxiliary items such as furniture legs and cushions they may also fit springs or special mechanisms furniture assemblers follow instructions or blueprints to assemble the furniture and use hand tools and power tools',
-        'drill press operators set up and operate drill presses designed to cut excess material from or enlarge a hole in a fabricated workpiece using a hardened rotary multipointed cutting tool that inserts the drill into the workpiece axially',
-        'booksewing machine operators tend a machine that stitches paper together to form a volume they check that signatures are inserted the right way and the machine does not jam'
-
+    occupations: { title: string, description: string }[] = [
+        {
+            title: 'healthcare consultant',
+            description: 'Healthcare consultants advise health care organisations on the development of plans to improve patient care and safety. They analyse health care policies and identify issues, and aid in the development of improvement strategies.'
+        },
+        {
+            title: 'public health policy officer',
+            description: "Public health policy officers develop and implement strategies for the improvement of a community's health care policy. They advise governments on policy changes and identify problems in current health care policies."
+        },
+        {
+            title: 'policy officer',
+            description: 'Policy officers research, analyse and develop policies in various public sectors, and shape and implement these policies to improve the existing regulation around the sector. They evaluate effects of existing policies and report findings to the government and members of the public. Policy officers work closely with partners, external organisations or other stakeholders and provide them with regular updates.'
+        },
+        {
+            title: 'social services manager',
+            description: 'Social services managers have the responsibility for strategic and operational leadership and management of staff teams and resources within and or across social services. They are responsible for the implementation of legislation and policies relating to, for example, decisions about vulnerable people.  They promote social work and social care values and ethics, equality and diversity, and relevant codes guiding practice. They are responsible for liaising with other professionals in criminal justice, education and health. They can be responsible for contributing to local and national policy development.'
+        },
+        {
+            title: 'youth programme director',
+            description: "Youth programme directors develop and implement programmes and policies to improve and ensure youths' well-being. They facilitate communication with and between educational, recreational, counselling or other youth related institutions, organise events for youths and families, and promote social mobility and awareness.",
+        },
+        {
+            title: "social service consultant",
+            description: "Social service consultants aid in the development of policy and procedure for social service programs. They research social service programs and identify areas for improvement, as well as aid in the development of new programs. They fulfil advisory functions for social service organisations."
+        },
+        {
+            title: "youth centre manager",
+            description: "Youth centre managers plan and supervise the operations of children and youth homes which provide care and counselling services. They assess the needs for youths in the community, develop and implement pedagogical methods, and develop programs for the improvement of youth care in the centre."
+        },
+        {
+            title: "social services policy officer",
+            description: "Social services policy officers research, analyse and develop social services policies and implement these policies and services to improve circumstances of disadvantaged and vulnerable members of society such as children and elderly people. They work in the administration of social services and stay in contact with organisations and other stakeholders and provide them with regular updates."
+        },
+        {
+            title: "Special-interest groups' officials represent and act on behalf of special-interest groups such as trade unions, employer organisations, trade and industry associations, sports associations and humanitarian organisations. They develop policies and ensure their implementation. Special-interest groups' officials speak for their members in negotiations about topics such as working conditions and safety.",
+            description: "Special-interest groups' officials represent and act on behalf of special-interest groups such as trade unions, employer organisations, trade and industry associations, sports associations and humanitarian organisations. They develop policies and ensure their implementation. Special-interest groups' officials speak for their members in negotiations about topics such as working conditions and safety."
+        },
+        {
+            title: "service manager",
+            description: "Service managers are responsible for the supervision and coordination of the provision of different professional and technical services to customers. They ensure a smooth interaction with clients and high levels of satisfaction post-service.Â This occupation includes the provision of policing, correctional, library, legal and fire services."
+        }
     ]
     constructor(private _formBuilder: FormBuilder) {
-        this.descriptions = this.descriptions.map(descr => descr[0].toUpperCase() + descr.substring(1) + '.')
+
+        this.occupations = this.occupations.map(occ => {
+            occ.title = occ.title[0].toUpperCase() + occ.title.substring(1)
+            return occ
+        })
     }
     public initialize(): void {
         this.initUserForm();
@@ -41,8 +74,8 @@ export class FormsService {
     }
     private initRatingsForm(): void {
         this.ratingsForm = this._formBuilder.array([])
-        this.descriptions.forEach(
-            description => this.ratingsForm.push(new FormControl(3, Validators.required))
+        this.occupations.forEach(
+            occupation => this.ratingsForm.push(new FormControl(3, Validators.required))
         )
     }
     public toggleCluster(name: string) {

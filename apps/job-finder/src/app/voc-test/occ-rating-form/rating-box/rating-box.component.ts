@@ -7,6 +7,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./rating-box.component.scss']
 })
 export class RatingBoxComponent implements OnInit {
+  @Input() title: string;
   @Input() description: string;
   @Input() control: FormControl;
   max = 5;

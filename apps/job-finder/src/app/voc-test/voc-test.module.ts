@@ -18,6 +18,7 @@ import { ClusterBoxComponent } from './occ-clusters-form/cluster-box/cluster-box
 import { RatingBoxComponent } from './occ-rating-form/rating-box/rating-box.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatSliderModule } from '@angular/material/slider';
+import { DescriptionComponent } from './description/description.component';
 
 const MaterialModules = [
     MatInputModule,
@@ -36,7 +37,8 @@ const MaterialModules = [
         OccClustersFormComponent,
         OccRatingFormComponent,
         ClusterBoxComponent,
-        RatingBoxComponent
+        RatingBoxComponent,
+        DescriptionComponent
     ],
     imports: [
         CommonModule,
