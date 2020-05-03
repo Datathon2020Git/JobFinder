@@ -1,6 +1,18 @@
 <section class="ratings-container">
     <h3 class="text-center">You rated:</h3>
-    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-        [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType" [colors]="colors">
-    </canvas>
+    <hr>
+    <section fxLayout>
+        <section fxFlex="25%">
+            You chose the following categories:
+            <ul>
+                <li>Healthcare</li>
+                <li>Social Workers</li>
+            </ul>
+        </section>
+        <section fxFlex="grow">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType" [colors]="colors">
+            </canvas>
+        </section>
+    </section>
 </section>

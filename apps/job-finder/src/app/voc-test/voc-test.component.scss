@@ -1,4 +1,5 @@
 :host {
+    display: flex;
     ::ng-deep .mat-form-field {
         max-width: 300px;
     }

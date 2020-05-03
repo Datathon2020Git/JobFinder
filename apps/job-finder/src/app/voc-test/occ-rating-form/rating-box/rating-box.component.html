@@ -1,8 +1,15 @@
-<mat-card fxLayout="column" fxLayoutAlign="space-between strech">
-    {{title}}
-    <span>
-        {{description}}
-    </span>
+<mat-card fxLayout="column" fxLayoutAlign="space-between strech" fxFlex="grow">
+    <section>
+        <h2 class="mb-1 text-center">
+            <b>
+                {{title}}
+            </b>
+        </h2>
+        <span>
+            {{description}}
+        </span>
+
+    </section>
     <section>
         <hr>
         <mat-slider [max]="5" [min]="min" [step]="step" [thumbLabel]="thumbLabel" [tickInterval]="tickInterval"

@@ -1,5 +1,5 @@
 <form [formGroup]="clusterForm" class="mt-1">
-    <section fxLayout="row wrap" fxLayoutGap="0.5rem" fxLayoutAlign="center center">
+    <section fxLayout="row wrap" fxLayoutGap="1rem" fxLayoutAlign="center center">
         <h3>You should choose up to two Vocations Categories. The categories are based on our own Machine
             Learning models.</h3>
         <job-finder-cluster-box *ngFor="let clusterName of clusterNames" [name]="clusterName"></job-finder-cluster-box>

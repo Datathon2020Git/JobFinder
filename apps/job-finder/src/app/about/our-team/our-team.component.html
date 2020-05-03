@@ -1,1 +1,5 @@
-<p>our-team works!</p>
+<section fxLayout fxLayoutGap="1rem">
+    <section *ngFor="let url of imageUrls">
+        <job-finder-team-member [imgUrl]="url"></job-finder-team-member>
+    </section>
+</section>

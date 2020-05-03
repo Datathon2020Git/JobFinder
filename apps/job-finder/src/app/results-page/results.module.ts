@@ -7,13 +7,14 @@ import { RecommendationsChartComponent } from './recommendations-chart/recommend
 import { ResultsPageComponent } from './results-page.component';
 import { ResultsRoutingModule } from './results.routing.module';
 import { RatingsChartComponent } from './ratings-chart/ratings-chart.component';
+import { ForecastsChartComponent } from './forecasts-chart/forecasts-chart.component';
 
 @NgModule({
     declarations: [
         ResultsPageComponent,
         RecommendationsChartComponent,
         RatingsChartComponent,
-        // ForecastsChartComponent
+        ForecastsChartComponent
     ],
     imports: [
         CommonModule,

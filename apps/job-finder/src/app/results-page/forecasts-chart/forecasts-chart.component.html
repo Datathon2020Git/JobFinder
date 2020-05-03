@@ -1,1 +1,17 @@
-<p>forecasts-chart works!</p>
+<section class="forecasts-container">
+    <h2 class="text-center mb-2">Job Opening Forecast and Comparisons</h2>
+    <hr>
+    <p>Your country of Residence is <b>Greece</b>. Each occupation belongs to a broader category, based on <a
+            href="https://ec.europa.eu/esco/portal/occupation" target="_blank">ESCO's
+            groupings</a> (ISCO-08 code excluding Armed Forces).
+        The graphs below represent the total Job Openings in your country for it's respective broader category.
+        <br>
+        <br>
+        <i>
+            The Job Openings number represents the number of jobs that are expected to be available up until 2030.
+        </i>
+    </p>
+    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+        [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType" [colors]="colors">
+    </canvas>
+</section>

@@ -3,11 +3,14 @@
     justify-content: center;
     mat-card {
         padding-top: 2rem;
-        min-width: 50%;
+        width: 50%;
     }
     #chartContainer {
-        margin-top:3rem;
+        margin-top: 3rem;
         height: 370px;
         width: 100%;
+    }
+    @media (max-width: 758px) {
+        min-width: 50%;
     }
 }

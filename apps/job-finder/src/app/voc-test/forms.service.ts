@@ -40,7 +40,7 @@ export class FormsService {
             description: "Social services policy officers research, analyse and develop social services policies and implement these policies and services to improve circumstances of disadvantaged and vulnerable members of society such as children and elderly people. They work in the administration of social services and stay in contact with organisations and other stakeholders and provide them with regular updates."
         },
         {
-            title: "Special-interest groups' officials represent and act on behalf of special-interest groups such as trade unions, employer organisations, trade and industry associations, sports associations and humanitarian organisations. They develop policies and ensure their implementation. Special-interest groups' officials speak for their members in negotiations about topics such as working conditions and safety.",
+            title: "Special-interest groups",
             description: "Special-interest groups' officials represent and act on behalf of special-interest groups such as trade unions, employer organisations, trade and industry associations, sports associations and humanitarian organisations. They develop policies and ensure their implementation. Special-interest groups' officials speak for their members in negotiations about topics such as working conditions and safety."
         },
         {

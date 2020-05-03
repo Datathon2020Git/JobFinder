@@ -12,23 +12,22 @@ export class RatingsChartComponent implements OnInit {
   public ratings: IJob[] = results.ratings;
   public barChartOptions: ChartOptions = {
     responsive: true,
-    scales:{
-      yAxes: [{
+    scales: {
+      xAxes: [{
         ticks: {
           beginAtZero: true,
-          stepSize:1
+          stepSize: 1
         }
       }]
     }
   };
-
   public barChartLabels: Label[] = this.sortArr().map(v => v.job[0].toUpperCase() + v.job.substring(1))
-  public barChartType: ChartType = 'bar';
+  public barChartType: ChartType = 'horizontalBar';
   public barChartLegend = true;
   public barChartPlugins = [];
   public colors = ['#38829E']
   public barChartData: ChartDataSets[] = [
-    { data: this.sortArr().map(v => +v.score.toFixed(2)), label: 'Rating' ,backgroundColor:'#ECA87E' }
+    { data: this.sortArr().map(v => +v.score.toFixed(2)), label: 'Rating', backgroundColor: '#ECA87E' }
   ];
   constructor() { }
 

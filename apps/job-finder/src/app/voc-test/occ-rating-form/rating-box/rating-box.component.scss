@@ -1,9 +1,13 @@
 :host {
+    display: flex;
     mat-card {
         min-height: 350px;
         background-color: rgba(211, 211, 211, 0.2);
         .mat-slider-horizontal {
             min-width: 50%;
+        }
+        h2 {
+            font-size: 20px !important;
         }
     }
 }

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormArray } from '@angular/forms';
 import { FormsService } from '../forms.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'job-finder-occ-rating-form',
@@ -10,11 +11,12 @@ import { FormsService } from '../forms.service';
 export class OccRatingFormComponent implements OnInit {
   @Input() ratingsForm: FormArray;
 
-  constructor(public formsService: FormsService) { }
+  constructor(public formsService: FormsService, private router: Router) { }
 
   ngOnInit() {
   }
   submitForm() {
     console.log('Form Submitted');
+    this.router.navigate(['/results'])
   }
 }
